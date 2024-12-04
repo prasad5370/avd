@@ -1,0 +1,60 @@
+Write a function that accepts monthly salary of employee and calculates annual salary (for 12 months).
+This annual salary should be returned to another function that calculates provident fund at 12.5% of annual salary.
+
+def month(sal):
+    res = sal*12
+    return res
+
+def pf(a):
+    sal = month(a)
+    res = sal*(12.5/100)
+
+    return res
+
+salary = int(input('enter monthly salary: '))
+
+pf = pf(salary)
+
+print(pf)
+
+
+Write a function to calculate factorial value of a given number without using recursion.
+
+
+def fact(a):
+    res = a*1
+    return res
+
+num = int(input("enter number: "))
+result=1
+
+for i in range(num, -1,-1):
+    abc = fact(i)
+    
+    if abc == 0:
+        break
+    else:
+        result = result * abc
+
+print('factorial of %d is %d' %(num,result))
+
+
+Write a function that accepts a string and returns the number of chars in the string.
+
+def typeCheck(a):
+    if a.isalpha():
+        res = True
+        return res
+
+str = input("enter string: ")
+counter = 0
+for i in str:
+    abc = typeCheck(i)
+    
+    if abc:
+        counter +=1
+    else:
+        continue
+    
+
+print('%s is consist %d char' %(str, counter))

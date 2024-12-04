@@ -1,0 +1,46 @@
+5. Accept a character from the keyboard. Write a program to check if a given character is a vowel or consonant.
+Note: Vowels are a,e,i,o,u.
+
+word = input('enter a word: ')
+
+if word[0] in ['a','e','i','o','u']: print(word[0],'is Vowel')
+else: print(word[0],'is consonant')
+
+
+
+6. Write a program to check if a given number is prime or not.
+Note: Prime number is a number that is not divisible by any other number except by 2 and itself.
+
+num = int(input('enter a number: '))
+
+for i in range(2,num):
+    if num%i == 0:
+        print(num,'is not prime number')
+        break
+else: print(num,'is prime number')
+
+7. Write a program to generate prime number series.
+Note: you have to display n primes as: 2,3,5,7,11,13,17,19, etc.
+
+num = int(input('enter a number: '))
+
+for i in range(2,num+1):
+    for j in range(2, num+1):
+        if i%j == 0:
+            break
+    if i == j:
+        print(i)
+
+8. 1. Write a Python program to reverse a list of numbers given.
+Ex: the given list is [10, 20, 5, 4, 33, 22]
+Your program should print [22, 33, 4, 5, 20, 10]
+Note: Do the above program without using slicing and reverse() methods. 
+
+
+lst = [10, 20, 5, 4, 33, 22]
+
+revLst = []
+for i in range(len(lst)-1,-1,-1):
+    revLst.append(lst[i])
+
+print(revLst)

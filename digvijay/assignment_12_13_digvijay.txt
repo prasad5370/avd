@@ -1,0 +1,17 @@
+Create a lambda to calculate cumulative sum of all elements in a list.
+
+lst = (2,4,-6,8,-1,2,3)
+
+f = filter(lambda x: x<0, lst)
+print(tuple(f))
+
+
+Create a lambda to calculate cumulative sum of all elements in a list.
+
+
+from functools import * 
+
+lst = [2,4,-6,8,-1,2,3]
+
+f = reduce(lambda x,y: x+y, lst)
+print(f)
